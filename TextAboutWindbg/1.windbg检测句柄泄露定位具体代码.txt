@@ -1,0 +1,10 @@
+﻿1.代码demo参考 ../TestProgram/1.lsa 工程
+2.gflags.exe -> Image File页面
+   image: 填写 待跟踪进程名称
+   勾选Enable application verifier
+   勾选Stack Backtrance:(Megs)  填写 10
+3.启动windbg，并加载到待跟踪的进程
+4.执行 !htrace -enable 命令，用于开启句柄检测
+5.执行 !htrace -snapshot  获取此时句柄镜像
+6.执行 !htrace -diff 获取当前状态与镜像状态的不同之处
+7.lsa + 具体地址 获取该位置对应代码
